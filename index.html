@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address Book Application</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1 class="logo">Address Book</h1>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-button">Home</a></li>
+                    <li><a href="#add-contact" class="nav-button">Add Contact</a></li>
+                    <li><a href="#contacts-list" class="nav-button">View Contacts</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="main-header">
+            <h1>Contacts</h1>
+            <p class="main-description">You can add, edit, search and view contacts here</p>
+        </div>
+        
+        <div class="cards-container">
+            <div class="card">
+                <h2>Add Contact</h2>
+                <p>Create a new contact with details like name, email, and phone number</p>
+                <button class="card-button" data-action="add">Add Contact</button>
+            </div>
+            
+            <div class="card">
+                <h2>View Contacts</h2>
+                <p>Browse and search through your existing contacts</p>
+                <button class="card-button" data-action="view">View Contacts</button>
+            </div>
+        </div>
+
+        <div id="add-contact-form" class="form-section" style="display: none;">
+            <div class="form-header">
+                <h2>Add New Contact</h2>
+                <p>Fill in the contact details below</p>
+            </div>
+
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label for="firstName">First Name*</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName">Last Name*</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address*</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number*</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <textarea id="address" name="address" rows="3"></textarea>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="button" class="button secondary" id="cancelBtn">Cancel</button>
+                    <button type="submit" class="button primary">Save Contact</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Address Book &copy; 2024</p>
+    </footer>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
